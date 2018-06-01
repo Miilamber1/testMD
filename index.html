@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery vs ES6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>jQuery</h1>
+  <ul>
+    <li class="jqDOM">All in one Library (DOM, ajax, utility, animation*) - animation still better in jQuery</li>
+    <li class="jqDOM">Easy and Cross Browser compatible</li>
+    <li class="jqDOM">A Lot less code than older JS</li>
+    <li class="jqDOM">Quick default builds with available plug-ins</li>
+  </ul>
+  <h1>ES6</h1>
+  <ul class="disJS">
+    <li class="domJS">DOM Selection is now easily comparable in ES6 JS</li>
+  </ul>
+  <table>
+    <tr>
+      <th>jQuery</th>
+      <th class="padlL">ES6 JavaScript</th>
+    </tr>
+    <tr>
+      <td>$element.remove()</td>
+      <td class="padlL">element.remove()</td>
+    </tr>
+    <tr>
+      <td>$element.prepend(otherElement)</td>
+      <td class="padlL">element.prepend(otherElement)</td>
+    </tr>
+    <tr>
+      <td>$element.before(otherElement)</td>
+      <td class="padlL">element.before(otherElement)</td>
+    </tr>
+    <tr>
+      <td>$element.addClass('someClass')</td>
+      <td class="padlL">element.classList.add('someClass')</td>
+    </tr>
+    <tr>
+      <td>$element.removeClass('someClass')</td>
+      <td class="padlL">element.classList.remove('someClass')</td>
+    </tr>
+    <tr>
+      <td>$element.toggleClass('someClass')</td>
+      <td class="padlL">element.classList.toggle('someClass')</td>
+    </tr>
+    <tr>
+      <td>const parent = $element.parent()</td>
+      <td class="padlL">const parent = element.parentNode</td>
+    </tr>
+    <tr>
+      <td>const cloned = $element.clone()</td>
+      <td class="padlL">const cloned = element.cloneNode(true)</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <strong>
+        <th>jQuery Events</th>
+      </strong>
+      <strong>
+        <th class="padlL">ES6 JavaScript Events</th>
+      </strong>
+    </tr>
+    <tr>
+      <td>$someElement.on('click', function(e)</td>
+      <td class="padlL">someElement.addEventListener('click', e =&gt;</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <strong>
+        <th>jQuery Utilities</th>
+      </strong>
+      <strong>
+        <th class="padlL">ES6 JavaScript Utilities</th>
+      </strong>
+    </tr>
+    <tr>
+      <td>$.isArray(someValue)</td>
+      <td class="padlL">Array.isArray(someValue)</td>
+    </tr>
+    <tr>
+      <td>$.inArray(item, anArray)</td>
+      <td class="padlL">someArray.indexOf(item) &gt; -1</td>
+    </tr>
+    <tr>
+      <td>$.each(someArray, (index, value) =&gt;</td>
+      <td class="padlL">someArray.forEach((value, index) =&gt;</td>
+    </tr>
+    <tr>
+      <td>$.map(someArray, (value, index) =&gt;</td>
+      <td class="padlL">someArray.map((value, index) =&gt;</td>
+    </tr>
+    <tr>
+      <td>$.grep(someArray, (index, value) =&gt;</td>
+      <td class="padlL">someArray.filter((value, index) =&gt;</td>
+    </tr>
+    <tr>
+      <td>$.parseJSON(str)</td>
+      <td class="padlL">JSON.parse(str)</td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <th>DOM Select/Manipulate</th>
+      <td class="padlL">querySelector() and Native Browser API</td>
+    </tr>
+    <tr>
+      <th>HTTP Ajax Requests</th>
+      <td class="padlL">Fetch or Axios or other 3rd party Library (eg. EaselJS)</td>
+    </tr>
+    <tr>
+      <th>Browser Support</th>
+      <td class="padlL">Modern Browsers + Babel & Polyfills</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
